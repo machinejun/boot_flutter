@@ -17,12 +17,13 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Image.asset('images/lake.jpeg',
+            Image.asset(
+              'images/lake.jpeg',
               width: 600,
               height: 240,
               fit: BoxFit.cover,
             ),
-            titleSection,
+            ChangeStarScore(),
             buttonSection,
             textSection
           ],
@@ -30,44 +31,15 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
-  
 }
 
-Widget titleSection = Container(
-  padding: const EdgeInsets.all(32),
-  child: Row(
-    children: [
-      Expanded(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.only(bottom: 8),
-            child: const Text("Oeschinen Lake Campground",
-                style: TextStyle(fontWeight: FontWeight.bold)),
-          ),
-          Text("Kandersteg, Switzerland",
-              style: TextStyle(color: Colors.grey[500]))
-        ],
-      )),
-      const Icon(
-        Icons.star,
-        color: Colors.red,
-      ),
-      const Text("41")
-    ],
-  ),
-);
-
 Widget buttonSection = Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      _buildButtonColumn(Colors.blue, Icons.call, "CALL"),
-      _buildButtonColumn(Colors.blue, Icons.near_me, "ROUTE"),
-      _buildButtonColumn(Colors.blue, Icons.share, "SHARE")
-      
-    ],
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    _buildButtonColumn(Colors.blue, Icons.call, "CALL"),
+    _buildButtonColumn(Colors.blue, Icons.near_me, "ROUTE"),
+    _buildButtonColumn(Colors.blue, Icons.share, "SHARE")
+  ],
 );
 
 Column _buildButtonColumn(Color color, IconData icon, String label) {
@@ -96,3 +68,54 @@ Widget textSection = const Padding(
     softWrap: true,
   ),
 );
+
+class ChangeStarScore extends StatefulWidget {
+  const ChangeStarScore({Key? key}) : super(key: key);
+
+  @override
+  State<ChangeStarScore> createState() => _ChangeStarScoreState();
+}
+
+class _ChangeStarScoreState extends State<ChangeStarScore> {
+  int score = 0;
+
+  @override
+  void initState() {
+    score = 0;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: (() => setState(() {
+            score ++;
+          })),
+      child: Container(
+        padding: const EdgeInsets.all(32),
+        child: Row(
+          children: [
+            Expanded(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: const Text("Oeschinen Lake Campground",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+                Text("Kandersteg, Switzerland",
+                    style: TextStyle(color: Colors.grey[500]))
+              ],
+            )),
+            const Icon(
+              Icons.star,
+              color: Colors.red,
+            ),
+            Text(score.toString())
+          ],
+        ),
+      ),
+    );
+  }
+}
