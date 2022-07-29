@@ -1,0 +1,10 @@
+^C:\WORKSPACE_FLUTTER\FLUTTER_AIRBNB\BUILD\WINDOWS\CMAKEFILES\905B1628A705B2A40BE842D1C3406B7D\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

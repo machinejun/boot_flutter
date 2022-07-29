@@ -1,0 +1,10 @@
+^C:\WORKSPACE_FLUTTER\FLUTTER_AIRBNB\BUILD\WINDOWS\CMAKEFILES\905B1628A705B2A40BE842D1C3406B7D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/workspace_flutter/flutter_airbnb/windows -BC:/workspace_flutter/flutter_airbnb/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/workspace_flutter/flutter_airbnb/build/windows/flutter_airbnb.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
