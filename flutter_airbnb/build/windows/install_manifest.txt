@@ -5,6 +5,7 @@ C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_asse
 C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/assets/banner.jpg
 C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/assets/logo.png
 C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/assets/p1.jpeg
+C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/assets/p2.jpeg
 C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/assets/p3.jpeg
 C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/assets/p4.jpeg
 C:/workspace_flutter/flutter_airbnb/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
