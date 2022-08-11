@@ -15,13 +15,30 @@ class MyCarrotProfileCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Column(
-            children: List.generate(
-                items1.length,
-                (index) => Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: _buildListItem(
-                          items1[index].icondata, items1[index].text),
-                    )),
+            children: [
+              Column(
+                children: List.generate(
+                    items1.length,
+                    (index) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: _buildListItem(
+                              items1[index].icondata, items1[index].text),
+                        )),
+              ),
+              Container(
+                height: 10,
+                decoration: BoxDecoration(color: Colors.grey),
+              ),
+              Column(
+                children: List.generate(
+                    items2.length,
+                    (index) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: _buildListItem(
+                              items2[index].icondata, items2[index].text),
+                        )),
+              )
+            ],
           ),
         ),
       ),

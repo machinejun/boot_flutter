@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_carrot_ui/models/chat_box.dart';
+import 'package:flutter_carrot_ui/models/neighboodLife_card.dart';
 
 import 'package:flutter_carrot_ui/screens/chatting/chatting_screen.dart';
 import 'package:flutter_carrot_ui/screens/home/home_screen.dart';
 import 'package:flutter_carrot_ui/screens/my_carrot/my_carrot_profile.dart';
+import 'package:flutter_carrot_ui/screens/my_carrot/my_carrot_screen2.dart';
 import 'package:flutter_carrot_ui/screens/my_carrot/my_carrpt_screen.dart';
 import 'package:flutter_carrot_ui/screens/near_me/near_me_screen.dart';
 import 'package:flutter_carrot_ui/screens/neighborhood_life/neighborhood_life_screen.dart';
@@ -25,10 +28,10 @@ class _MainScreenState extends State<MainScreen> {
         index: _selectedIndex,
         children: [
           HomeScreen(),
-          NeighborHoodLifeScreen(),
+          NeighborHoodLifeScreen(itemList: cardItmelist),
           NearMeScreen(),
-          ChattingScreen(),
-          MyCarrotScreen()
+          ChattingScreen(chatBoxList: chatboxList),
+          MyCarrotScreen2()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

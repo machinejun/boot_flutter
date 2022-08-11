@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         body: ListView(
           children: [
             Image.asset(
-              'images/lake.jpeg',
+              'images/lake.jpg',
               width: 600,
               height: 240,
               fit: BoxFit.cover,
@@ -89,7 +89,7 @@ class _ChangeStarScoreState extends State<ChangeStarScore> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (() => setState(() {
-            score ++;
+            score++;
           })),
       child: Container(
         padding: const EdgeInsets.all(32),
